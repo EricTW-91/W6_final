@@ -1,0 +1,368 @@
+@import "./reset";
+@import "./color";
+
+
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundOpacity{
+    content: '';
+    border-radius: 12px;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+body {
+    
+    background-color: white;
+    
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+
+
+header{
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $DM_Color_01;
+    a{
+        color: white;
+    }
+    #header_logo{
+        // height: 95%;
+        margin-left: 1%;
+        a{
+            font-size: 100%;
+        }
+    }
+    nav{
+        width: 20%;
+        display: flex;
+        justify-content: space-around;
+        a{
+            // margin: 0 2% 0 2%;
+        }
+    }
+    #header_contact{
+        margin-right: 1%;
+    }
+}
+
+#optionBt{
+    position: fixed;
+    right: 30px;
+    top: 10vh;
+    background: none;
+    border: none;
+    img{
+        width: 50px;
+    }
+}
+
+#optionBt, #CMBt_close, #colorModeBt{
+    outline: none;
+    cursor: pointer;
+}
+
+#optionBox{
+    display: none;
+    position: fixed;
+    right: 30px;
+    top: 10vh;
+    width: 200px;
+    height: 80px;
+    border: 2px black solid;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+
+    #CMBt_close{
+        width: 20%;
+        height: 40%;
+        align-self: start;
+        background: none;
+        border: none;
+        
+        img{
+            width: 20px;
+        }
+    }
+    
+    #colorModeBt{
+        width: 60%;
+        height: 100%;
+        background: none;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        #liteModeImg, #darkModeImg{
+            display: none;
+            height: 80%;
+            
+        }
+    }
+}
+
+
+
+
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    padding: 10vh 0 10vh 0;
+    img{
+        min-width: 250px;
+        width: 30%;
+        min-height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 15vh;
+        box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.3)
+    }
+    .title{
+        @extend .flex_center;
+        text-align: center;
+        width: 43vw;
+        margin: 0 auto 0 auto;
+        padding-bottom: 5vh;
+        display: none;
+    }
+}
+
+h2{
+    @extend .flex_center;
+    text-align: center;
+    // width: 50vw;
+    margin: 0 auto 0 auto;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+#musicStart{
+    // display: none;
+}
+
+.musicSection, .projectSection{
+    width: 80vw;
+}
+
+.music{
+    display: none;
+    background-color: $LM_Color_02;
+
+    .musicSection{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        margin: 0 auto 0 auto;
+        padding-bottom: 10vh;
+        div{
+            // border: black solid 2px;
+            border-radius: 12px;
+            min-width: 350px;
+            min-height: 200px;
+            width: 80%;
+            // height: auto;
+        }
+
+        .playButton{
+            // display: none;
+            // background-image: url('https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-play-icon-png-image_695339.jpg');
+            opacity: 0;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            width: 20%;
+            img{
+                width: 100%;
+                height: 100; 
+            }
+            
+        }
+
+        div:hover{
+            // background: linear-gradient( rgba(0, 0, 0, 1.0), rgba(71, 71, 71, 0.5));
+            background: linear-gradient(127deg, rgba(0, 0, 0, 1) 70%, rgba(255, 255, 255, 1));
+        }
+
+        div:hover h3{
+            transition-duration: 0.5s;
+            color: rgba($color: rgb(255, 250, 250), $alpha: 1.0);
+            background: darken($color: red, $amount: 20%)
+        }
+
+        div:hover h4{
+            transition-duration: 0.5s;
+            color: rgba($color: rgb(255, 250, 250), $alpha: 1.0);
+            background: darken($color: rgb(251, 255, 0), $amount: 20%)
+        }
+
+        div:hover  .playButton{
+            transition-duration: 0.5s;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+
+
+        h3{
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            background-color: red;
+            height: 20px;
+            margin: 5%;
+            vertical-align: baseline;
+        }
+
+        h4{
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            background-color: rgb(251, 255, 0);
+            height: 20px;
+            margin: 5%;
+        }
+
+        .musicBlock01, .musicBlock02, .musicBlock03, .musicBlock04, .musicBlock05, .musicBlock06{
+            position: relative;
+        }
+
+        .musicBlock01::before{
+            background-image: url('https://akstatic.streetvoice.com/song_covers/hu/e1/hue1993/PWmNwx93KJGmJwSLHBKSeB.JPG?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg');
+            @extend .backgroundOpacity;
+        }
+        .musicBlock02::before{
+            background-image: url('https://akstatic.streetvoice.com/song_covers/Be/st/Bestards/zLvwjJdnuvU4LRFHkc4S5.png?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg');
+            @extend .backgroundOpacity;
+        }
+        .musicBlock03::before{
+            background-image: url('https://akstatic.streetvoice.com/song_covers/ac/cu/accusefive/gdPcJzXQQsHRBzFtsfsxk6.jpeg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg');
+            @extend .backgroundOpacity;
+        }
+        .musicBlock04::before{
+            background-image: url('https://akstatic.streetvoice.com/song_covers/hu/ma/humanhart/6c4tNig3U6V6vQYDP24wap.jpg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg');
+            @extend .backgroundOpacity;
+        }
+        .musicBlock05::before{
+            background-image: url('https://akstatic.streetvoice.com/song_covers/we/ar/wearewang/z5ZirbLTFsVLjsTT5iccgC.jpg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg');
+            @extend .backgroundOpacity;
+        }
+        .musicBlock06::before{
+            background-image: url('https://akstatic.streetvoice.com/song_covers/lu/ke/lukechan168/RSV6K8x4oHkttYoTX2yrP9.jpg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg');
+            @extend .backgroundOpacity;
+        }
+
+
+        // .musicBlock02{
+        //     grid-column-start: 2;
+        //     grid-column-end: 4;
+        // }
+    }
+}
+
+.musicPlayer{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+
+footer{
+    height: 10vh;
+    bottom: 0;
+    @extend .flex_center;
+    color: white; 
+    background-color: $DM_Color_01;
+    
+}
+
+@media (max-width: 400px) {
+    .musicSection{
+        
+        // grid-column: 1/4;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        // grid-gap: 1em;
+        // justify-items: center;
+        // margin: 0 auto 0 auto;
+        // padding-bottom: 10vh;
+        // width: 90%;
+        div{
+            grid-column: 1/4;
+            height: 50px;
+            min-width: 350px;
+            min-height: 100px;
+        }
+    }
+
+    header{
+        #header_logo a{
+                font-size: small;
+    
+        }
+
+        nav a{
+            padding: 5px;
+            font-size: x-small;
+        }
+
+        #header_contact a{
+            font-size: x-small;
+        }
+    }
+
+    h2{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+
+    figure{
+        padding: 5vh 0 5vh 0;
+        img{
+            margin-bottom: 5vh;
+        }
+        p{
+            width: 70%;
+        }
+    }
+
+    #optionBt{
+        right: 3vw;
+        top: 8vh;
+        img{
+            width: 30px;
+        }
+    }
+
+}

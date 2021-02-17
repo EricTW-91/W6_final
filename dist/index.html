@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's Portfolio</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header_logo">
+            <a href="./index.html">Eric Tseng</a>
+        </div>
+        <nav>
+            <a href="#musicStart">Musics</a>
+            <a href="#comicStart">Comics</a>
+        </nav>
+        <div id="header_contact">
+            <a href="">Contact me</a>
+        </div>
+    </header>
+
+    <button id="optionBt">
+        <img src="./image/16-163233_this-free-icons-png-design-of-option-button-symbol-gear-icon-png.png" alt="" srcset="">
+    </button>
+
+    <div id="optionBox">
+        <button id="CMBt_close">
+            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="">
+        </button>
+        <button id="colorModeBt" onclick="darkModeToggle()">
+            <img id="liteModeImg" src="https://cdn3.iconfinder.com/data/icons/meteocons/512/sun-symbol-512.png" alt="">
+            <img id="darkModeImg" src="https://cdn3.iconfinder.com/data/icons/meteocons/512/moon-black-512.png" alt="">
+        </button>
+    </div>
+    
+
+    <figure>
+        <img src="https://thumbs-prod.si-cdn.com/ej9KRK9frB5AXD6W9LXKFnuRc-0=/fit-in/1600x0/https://public-media.si-cdn.com/filer/ad/7b/ad7b3860-ad5f-43dc-800e-af57830cd1d3/labrador.jpg" alt="Eric Tseng">
+        <h1 class="title">Eric Tseng</h1>
+        <p class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum rerum explicabo. Nam consectetur quos velit dolores asperiores culpa, maxime dolor. Molestiae unde numquam quo maiores fugiat. Similique, ipsam tempore.</p>
+    </figure>
+    
+    <article class="music">
+        <h2 id="musicStart">Musics</h2>
+        <div class="musicSection">
+            <div class="musicBlock01">
+                <h3>Shitty love song</h3><br>
+                <h4>by <em>hue</em></h4>
+                <button id="playBt01" class="playButton">
+                    <img src="./image/play-1173551_1280.png" alt="" srcset="">
+                </button>
+            </div>
+            <div class="musicBlock02">
+                <h3>Planet</h3><br>
+                <h4>by <em>Bestards</em></h4>
+                <button id="playBt02" class="playButton">
+                    <img src="./image/play-1173551_1280.png" alt="" srcset="">
+                </button>
+            </div>
+            <div class="musicBlock03">
+                <h3>Lost you in this city</h3><br>
+                <h4>by <em>Accusefive</em></h4>
+                <button id="playBt02" class="playButton">
+                    <img src="./image/play-1173551_1280.png" alt="" srcset="">
+                </button>
+            </div>
+            <div class="musicBlock04">
+                <h3>A bad joke</h3><br>
+                <h4>by <em>HumanHart</em></h4>
+                <button id="playBt02" class="playButton">
+                    <img src="./image/play-1173551_1280.png" alt="" srcset="">
+                </button>
+            </div>
+            <div class="musicBlock05">
+                <h3>Enjoy</h3><br>
+                <h4>by <em>Wong next door</em></h4>
+                <button id="playBt02" class="playButton">
+                    <img src="./image/play-1173551_1280.png" alt="" srcset="">
+                </button>
+            </div>
+            <div class="musicBlock06">
+                <h3>Lost you and myself</h3><br>
+                <h4>by <em>Hormone boys</em></h4>
+                <button id="playBt02" class="playButton">
+                    <img src="./image/play-1173551_1280.png" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+    </article>
+    
+    <!-- music -->
+    <iframe id="play01" class="musicPlayer" src="https://streetvoice.com/music/embed/?id=632421" width="330" height="100" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    <iframe id="play02" class="musicPlayer" src="https://streetvoice.com/music/embed/?id=551405" width="330" height="100" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+
+
+
+
+
+
+
+    <article class="comic">
+        <h2 id="comicStart">Comics</h2>
+        <div class="comicSection">
+            
+        </div>
+    </article>
+    
+    <footer>
+        <div id="socialMedia">
+            <img src="data:image/png;base64,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" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <div>
+            &copy; 2021 Eric Tseng
+        </div>
+    </footer>
+
+
+</body>
+</html>

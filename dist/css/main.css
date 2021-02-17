@@ -1,0 +1,365 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex_center, figure .title, h2, footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.backgroundOpacity, .music .musicSection .musicBlock01::before, .music .musicSection .musicBlock02::before, .music .musicSection .musicBlock03::before, .music .musicSection .musicBlock04::before, .music .musicSection .musicBlock05::before, .music .musicSection .musicBlock06::before {
+  content: '';
+  border-radius: 12px;
+  opacity: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+}
+
+header a {
+  color: white;
+}
+
+header #header_logo {
+  margin-left: 1%;
+}
+
+header #header_logo a {
+  font-size: 100%;
+}
+
+header nav {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header #header_contact {
+  margin-right: 1%;
+}
+
+#optionBt {
+  position: fixed;
+  right: 30px;
+  top: 10vh;
+  background: none;
+  border: none;
+}
+
+#optionBt img {
+  width: 50px;
+}
+
+#optionBt, #CMBt_close, #colorModeBt {
+  outline: none;
+  cursor: pointer;
+}
+
+#optionBox {
+  display: none;
+  position: fixed;
+  right: 30px;
+  top: 10vh;
+  width: 200px;
+  height: 80px;
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+#optionBox #CMBt_close {
+  width: 20%;
+  height: 40%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  background: none;
+  border: none;
+}
+
+#optionBox #CMBt_close img {
+  width: 20px;
+}
+
+#optionBox #colorModeBt {
+  width: 60%;
+  height: 100%;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#optionBox #colorModeBt #liteModeImg, #optionBox #colorModeBt #darkModeImg {
+  display: none;
+  height: 80%;
+}
+
+figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 0 auto;
+  padding: 10vh 0 10vh 0;
+}
+
+figure img {
+  min-width: 250px;
+  width: 30%;
+  min-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15vh;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+figure .title {
+  text-align: center;
+  width: 43vw;
+  margin: 0 auto 0 auto;
+  padding-bottom: 5vh;
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.musicSection, .projectSection {
+  width: 80vw;
+}
+
+.music {
+  display: none;
+  background-color: #eee;
+}
+
+.music .musicSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  justify-items: center;
+  margin: 0 auto 0 auto;
+  padding-bottom: 10vh;
+}
+
+.music .musicSection div {
+  border-radius: 12px;
+  min-width: 350px;
+  min-height: 200px;
+  width: 80%;
+}
+
+.music .musicSection .playButton {
+  opacity: 0;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  width: 20%;
+}
+
+.music .musicSection .playButton img {
+  width: 100%;
+  height: 100;
+}
+
+.music .musicSection div:hover {
+  background: linear-gradient(127deg, black 70%, white);
+}
+
+.music .musicSection div:hover h3 {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  color: snow;
+  background: #990000;
+}
+
+.music .musicSection div:hover h4 {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  color: snow;
+  background: #979900;
+}
+
+.music .musicSection div:hover .playButton {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.music .musicSection h3 {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  background-color: red;
+  height: 20px;
+  margin: 5%;
+  vertical-align: baseline;
+}
+
+.music .musicSection h4 {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  background-color: #fbff00;
+  height: 20px;
+  margin: 5%;
+}
+
+.music .musicSection .musicBlock01, .music .musicSection .musicBlock02, .music .musicSection .musicBlock03, .music .musicSection .musicBlock04, .music .musicSection .musicBlock05, .music .musicSection .musicBlock06 {
+  position: relative;
+}
+
+.music .musicSection .musicBlock01::before {
+  background-image: url("https://akstatic.streetvoice.com/song_covers/hu/e1/hue1993/PWmNwx93KJGmJwSLHBKSeB.JPG?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg");
+}
+
+.music .musicSection .musicBlock02::before {
+  background-image: url("https://akstatic.streetvoice.com/song_covers/Be/st/Bestards/zLvwjJdnuvU4LRFHkc4S5.png?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg");
+}
+
+.music .musicSection .musicBlock03::before {
+  background-image: url("https://akstatic.streetvoice.com/song_covers/ac/cu/accusefive/gdPcJzXQQsHRBzFtsfsxk6.jpeg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg");
+}
+
+.music .musicSection .musicBlock04::before {
+  background-image: url("https://akstatic.streetvoice.com/song_covers/hu/ma/humanhart/6c4tNig3U6V6vQYDP24wap.jpg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg");
+}
+
+.music .musicSection .musicBlock05::before {
+  background-image: url("https://akstatic.streetvoice.com/song_covers/we/ar/wearewang/z5ZirbLTFsVLjsTT5iccgC.jpg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg");
+}
+
+.music .musicSection .musicBlock06::before {
+  background-image: url("https://akstatic.streetvoice.com/song_covers/lu/ke/lukechan168/RSV6K8x4oHkttYoTX2yrP9.jpg?x-oss-process=image/resize,m_fill,h_380,w_380,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg");
+}
+
+.musicPlayer {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+footer {
+  height: 10vh;
+  bottom: 0;
+  color: white;
+  background-color: #000;
+}
+
+@media (max-width: 400px) {
+  .musicSection {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .musicSection div {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    height: 50px;
+    min-width: 350px;
+    min-height: 100px;
+  }
+  header #header_logo a {
+    font-size: small;
+  }
+  header nav a {
+    padding: 5px;
+    font-size: x-small;
+  }
+  header #header_contact a {
+    font-size: x-small;
+  }
+  h2 {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  figure {
+    padding: 5vh 0 5vh 0;
+  }
+  figure img {
+    margin-bottom: 5vh;
+  }
+  figure p {
+    width: 70%;
+  }
+  #optionBt {
+    right: 3vw;
+    top: 8vh;
+  }
+  #optionBt img {
+    width: 30px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
